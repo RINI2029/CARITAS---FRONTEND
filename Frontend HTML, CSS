@@ -1,0 +1,209 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Caritas - Charity for Orphanages
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-pink-50 text-gray-800 min-h-screen flex flex-col">
+  <header class="bg-pink-100 shadow-md">
+   <nav class="container mx-auto flex items-center justify-between p-4 md:p-6">
+    <a class="text-3xl font-semibold text-pink-700" href="#home">
+     Caritas
+    </a>
+    <ul class="hidden md:flex space-x-8 text-pink-700 font-semibold">
+     <li>
+      <a class="hover:text-pink-900 transition" href="#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-pink-900 transition" href="#donate">
+       Donate
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-pink-900 transition" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-pink-900 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button class="md:hidden text-pink-700 focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars fa-2x">
+     </i>
+    </button>
+   </nav>
+   <div class="hidden md:hidden bg-pink-100" id="mobile-menu">
+    <ul class="flex flex-col space-y-4 p-4 text-pink-700 font-semibold">
+     <li>
+      <a class="block hover:text-pink-900 transition" href="#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-pink-900 transition" href="#donate">
+       Donate
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-pink-900 transition" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-pink-900 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <main class="flex-grow">
+   <section class="bg-pink-50 py-16 px-6 md:px-0 container mx-auto flex flex-col md:flex-row items-center gap-12" id="home">
+    <div class="md:w-1/2 text-center md:text-left">
+     <h1 class="text-4xl md:text-5xl font-extrabold text-pink-700 mb-6 leading-tight">
+      Help Us Bring Smiles to Orphanages
+     </h1>
+     <p class="text-pink-600 text-lg mb-8">
+      Donate food, provisions, and toiletries to nearby orphanages and make a difference in a child's life today.
+     </p>
+     <a class="inline-block bg-pink-300 hover:bg-pink-400 text-pink-900 font-semibold py-3 px-8 rounded-lg shadow-md transition" href="#donate">
+      Donate Now
+     </a>
+    </div>
+    <div class="md:w-1/2">
+     <img alt="A warm and inviting scene showing diverse children happily receiving donations of food and toiletries at an orphanage, pastel pink themed" class="rounded-lg shadow-lg mx-auto md:mx-0" height="400" src="https://storage.googleapis.com/a1aa/image/bc2d8b46-ba63-43f7-254c-c31548de2868.jpg" width="600"/>
+    </div>
+   </section>
+   <section class="bg-pink-100 py-16 px-6 md:px-0 container mx-auto max-w-4xl rounded-lg shadow-lg" id="donate">
+    <h2 class="text-3xl font-bold text-pink-700 mb-8 text-center">
+     Make a Donation
+    </h2>
+    <form action="#" class="bg-pink-50 p-8 rounded-lg shadow-inner" method="POST" novalidate="">
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div>
+       <label class="block mb-2 font-semibold text-pink-700" for="name">
+        Full Name
+       </label>
+       <input class="w-full rounded-md border border-pink-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 px-4 py-2" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block mb-2 font-semibold text-pink-700" for="email">
+        Email Address
+       </label>
+       <input class="w-full rounded-md border border-pink-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 px-4 py-2" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+      </div>
+     </div>
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-pink-700" for="donation-type">
+       Donation Type
+      </label>
+      <select class="w-full rounded-md border border-pink-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 px-4 py-2" id="donation-type" name="donation-type" required="">
+       <option disabled="" selected="" value="">
+        Select an option
+       </option>
+       <option value="food">
+        Food
+       </option>
+       <option value="provisions">
+        Provisions
+       </option>
+       <option value="toiletries">
+        Toiletries
+       </option>
+      </select>
+     </div>
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-pink-700" for="quantity">
+       Quantity / Description
+      </label>
+      <textarea class="w-full rounded-md border border-pink-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 px-4 py-2 resize-none" id="quantity" name="quantity" placeholder="Describe the quantity or items you want to donate" required="" rows="3"></textarea>
+     </div>
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-pink-700" for="location">
+       Your Location
+      </label>
+      <input class="w-full rounded-md border border-pink-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 px-4 py-2" id="location" name="location" placeholder="City or area" required="" type="text"/>
+     </div>
+     <button class="w-full bg-pink-300 hover:bg-pink-400 text-pink-900 font-semibold py-3 rounded-lg shadow-md transition" type="submit">
+      Submit Donation
+     </button>
+    </form>
+   </section>
+   <section class="bg-pink-50 py-16 px-6 md:px-0 container mx-auto max-w-5xl" id="about">
+    <h2 class="text-3xl font-bold text-pink-700 mb-8 text-center">
+     About Caritas
+    </h2>
+    <div class="flex flex-col md:flex-row items-center gap-12">
+     <div class="md:w-1/2">
+      <img alt="Volunteers happily packing food and toiletries in pastel purple themed room for orphanage donations" class="rounded-lg shadow-lg mx-auto md:mx-0" height="400" src="https://storage.googleapis.com/a1aa/image/0b0a9b02-cb6a-4472-7a3a-149a39743b75.jpg" width="600"/>
+     </div>
+     <div class="md:w-1/2 text-pink-700 text-lg leading-relaxed">
+      <p class="mb-4">
+       Caritas is a community-driven charity platform dedicated to supporting orphanages by facilitating donations of food, provisions, and toiletries. We connect generous donors with nearby orphanages to ensure children receive the care and essentials they deserve.
+      </p>
+      <p>
+       Our mission is to create a compassionate network that empowers individuals to contribute easily and meaningfully. Join us in spreading kindness and making a lasting impact in the lives of children in need.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="bg-pink-100 py-16 px-6 md:px-0 container mx-auto max-w-4xl rounded-lg shadow-lg" id="contact">
+    <h2 class="text-3xl font-bold text-pink-700 mb-8 text-center">
+     Contact Us
+    </h2>
+    <form action="#" class="bg-pink-50 p-8 rounded-lg shadow-inner" method="POST" novalidate="">
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-pink-700" for="contact-name">
+       Name
+      </label>
+      <input class="w-full rounded-md border border-pink-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 px-4 py-2" id="contact-name" name="contact-name" placeholder="Your name" required="" type="text"/>
+     </div>
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-pink-700" for="contact-email">
+       Email
+      </label>
+      <input class="w-full rounded-md border border-pink-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 px-4 py-2" id="contact-email" name="contact-email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-pink-700" for="contact-message">
+       Message
+      </label>
+      <textarea class="w-full rounded-md border border-pink-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-300 px-4 py-2 resize-none" id="contact-message" name="contact-message" placeholder="Write your message here" required="" rows="5"></textarea>
+     </div>
+     <button class="w-full bg-pink-300 hover:bg-pink-400 text-pink-900 font-semibold py-3 rounded-lg shadow-md transition" type="submit">
+      Send Message
+     </button>
+    </form>
+   </section>
+  </main>
+  <footer class="bg-pink-100 text-pink-700 py-6 mt-12">
+   <div class="container mx-auto text-center text-sm">
+    © 2024 Caritas. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
